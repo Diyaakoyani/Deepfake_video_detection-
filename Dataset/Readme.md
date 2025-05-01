@@ -1,12 +1,26 @@
-This project utilizes a subset of the DeepFake Detection Challenge Dataset from Kaggle, which contains a large collection of videos and audio files altered using deepfake techniques.
-🔗 Dataset Link: https://www.kaggle.com/competitions/deepfake-detection-challenge/data
+## 📁 Dataset
 
-Training Data: 400 .mp4 videos labeled as either real or fake
-Testing Data: 400 .mp4 videos used to evaluate model performance
-Metadata Description:
+The dataset used in this project is a sample of the **DeepFake Detection Challenge Dataset** hosted on Kaggle.  
+🔗 [Dataset Link](https://www.kaggle.com/competitions/deepfake-detection-challenge/data)
 
-filename – Name of the video file
-label – Ground truth: 1 for FAKE, 0 for REAL
-original – If the video is FAKE, this field indicates the name of the original REAL video
-split – Indicates the dataset split (value is always "train" in this sample)
-This dataset served as the foundation for training and testing our deepfake detection model.
+### 📦 Dataset Structure
+
+- **Train Data:**  
+  Contains **400 videos** in `.mp4` format.
+
+- **Test Data:**  
+  Contains **400 videos** in `.mp4` format.
+
+- **Metadata (JSON format):**  
+  Accompanies the video files and contains the following details:
+
+  | Key       | Description                                                                 |
+  |-----------|-----------------------------------------------------------------------------|
+  | `filename` | The filename of the video                                                  |
+  | `label`    | Label for classification – `1` for **FAKE**, `0` for **REAL**             |
+  | `original` | If the video is fake, this field shows the original source video filename |
+  | `split`    | Indicates dataset split – this is always `"train"` in our sample          |
+
+---
+
+> ⚠ **Note:** For this project, we used only a small, manageable portion of the dataset for training, testing, and evaluation due to storage and computational constraints.
